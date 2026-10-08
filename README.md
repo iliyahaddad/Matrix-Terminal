@@ -1,4 +1,4 @@
-# Matrix Terminal v0.2.2
+# Matrix Terminal
 
 A Windows terminal UI with real **ConPTY** backend, supporting CMD and Windows PowerShell plus Matrix, MikroTik-inspired and Classic themes.
 
