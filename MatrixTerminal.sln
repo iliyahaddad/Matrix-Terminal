@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixTerminal", "src\MatrixTerminal\MatrixTerminal.csproj", "{A2A3F9D4-5F1A-4D54-9D5E-6E2B8A9E2A11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2A3F9D4-5F1A-4D54-9D5E-6E2B8A9E2A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A3F9D4-5F1A-4D54-9D5E-6E2B8A9E2A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A3F9D4-5F1A-4D54-9D5E-6E2B8A9E2A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A3F9D4-5F1A-4D54-9D5E-6E2B8A9E2A11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
