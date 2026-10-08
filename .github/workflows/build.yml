@@ -1,0 +1,19 @@
+name: build
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: dotnet restore MatrixTerminal.sln
+      - run: dotnet build MatrixTerminal.sln -c Release --no-restore
+      - run: dotnet publish src/MatrixTerminal/MatrixTerminal.csproj -c Release -r win-x64 --self-contained false -o artifacts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MatrixTerminal-win-x64
+          path: artifacts/
