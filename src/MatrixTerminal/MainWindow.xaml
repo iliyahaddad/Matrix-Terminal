@@ -1,0 +1,39 @@
+<Window x:Class="MatrixTerminal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Matrix Terminal" Width="1100" Height="700" MinWidth="760" MinHeight="480"
+        Background="#030703" Foreground="#41FF69" FontFamily="Cascadia Mono, Consolas, Courier New" FontSize="14">
+  <Window.Resources>
+    <Style TargetType="Button">
+      <Setter Property="Focusable" Value="False"/>
+      <Setter Property="Margin" Value="4,0"/>
+      <Setter Property="Padding" Value="12,6"/>
+      <Setter Property="Background" Value="#111711"/>
+      <Setter Property="Foreground" Value="#41FF69"/>
+      <Setter Property="BorderBrush" Value="#28552F"/>
+    </Style>
+  </Window.Resources>
+  <Grid>
+    <Grid.RowDefinitions><RowDefinition Height="42"/><RowDefinition/><RowDefinition Height="34"/></Grid.RowDefinitions>
+    <DockPanel Grid.Row="0" Background="#071007">
+      <TextBlock Text="MATRIX TERMINAL" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Margin="14,0"/>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right">
+        <Button Click="NewCmd_Click" Content="CMD"/>
+        <Button Click="NewPowerShell_Click" Content="PowerShell"/>
+        <Button Click="Matrix_Click" Content="MATRIX"/>
+        <Button Click="Mikrotik_Click" Content="MIKROTIK"/>
+        <Button Click="Classic_Click" Content="CLASSIC"/>
+        <Button Click="Clear_Click" Content="CLEAR"/>
+      </StackPanel>
+    </DockPanel>
+    <Border Grid.Row="1" Margin="8" BorderBrush="#173A1D" BorderThickness="1" Background="#020402">
+      <RichTextBox x:Name="Output" IsReadOnly="True" IsUndoEnabled="False" BorderThickness="0" Background="#020402" Foreground="#41FF69"
+                   VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="10"
+                   FontFamily="Cascadia Mono, Consolas, Courier New" FontSize="14"/>
+    </Border>
+    <DockPanel Grid.Row="2" Background="#071007">
+      <TextBlock x:Name="Status" Text=" MATRIX | CONPTY " VerticalAlignment="Center" Margin="12,0"/>
+      <TextBlock Text="F6 Matrix • F7 MikroTik • F8 Classic • Ctrl+L Clear • Ctrl+Shift+C/V Copy/Paste" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,12,0"/>
+    </DockPanel>
+  </Grid>
+</Window>
