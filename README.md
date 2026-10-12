@@ -33,4 +33,5 @@ The UI is WPF. The shell is attached to a Windows ConPTY using `CreatePseudoCons
 The MikroTik theme is a visual theme. It does not emulate RouterOS or provide a MikroTik device. A future release may add RouterOS syntax highlighting and an SSH profile.
 
 ## License
-MIT. See `LICENSE`.
+See [LICENSE](LICENSE).
+
